@@ -1,0 +1,5 @@
+#!/home/jens/dev/test/tf-compliance/venv/bin/python
+from checkov.main import run
+
+if __name__ == '__main__':
+    run()
