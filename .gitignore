@@ -1,0 +1,4 @@
+.terraform
+tf.plan
+tf.plan.json
+.idea
