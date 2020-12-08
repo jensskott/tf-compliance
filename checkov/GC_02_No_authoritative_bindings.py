@@ -13,8 +13,7 @@ class NoAuthoritativeBindings(BaseResourceCheck):
 
     def scan_resource_conf(self, conf):
         """
-            Looks for prefix in names:
-        :param conf: google_storage_bucket configuration
+            Make sure no Authoritative bindings are in the code:
         :return: <CheckResult>
         """
         wrong_resource = bool(conf)
