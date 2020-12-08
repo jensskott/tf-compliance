@@ -1,5 +1,5 @@
 **/.terraform
-**/.tf.plan
-**/.tf.plan.json
+**/tf.plan
+**/tf.plan.json
 .idea
 **/__pycache__
