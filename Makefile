@@ -1,5 +1,5 @@
 clean:
-	find . -name ".terraform" -exec rm -rf {} \;
+	find . -type d -name ".terraform" -exec rm -rf {} \;
 	find . -type f -name "tf.plan" -exec rm -f {} \;
 	find . -type f -name "tf.plan.json" -exec rm -f {} \;
 

@@ -22,7 +22,7 @@ class MissingBucketLabels(BaseResourceCheck):
         :return: <CheckResult>
         """
 
-        if not'labels' in conf.keys():
+        if not 'labels' in conf.keys():
             return CheckResult.FAILED
 
         return CheckResult.PASSED

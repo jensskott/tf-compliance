@@ -24,8 +24,9 @@ class MissingTeamLabel(BaseResourceCheck):
 
         if 'labels' in conf.keys():
             environment_tag = Token("IDENTIFIER", "team")
-            if not environment_tag:
+            if not environment_tag in conf['labels'][0].keys():
                 return CheckResult.FAILED
+                
             return CheckResult.PASSED
 
 

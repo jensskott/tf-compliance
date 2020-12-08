@@ -24,11 +24,16 @@ class MissingTeamsInLabel(BaseResourceCheck):
 
         if 'labels' in conf.keys():
             environment_tag = Token("IDENTIFIER", "team")
-            
-            if re.match('^(team1\|team2\|team3)$', conf['labels'][0][environment_tag]) is None:
-                return CheckResult.FAILED
-            
-            return CheckResult.PASSED
+            print(environment_tag)
+
+            if environment_tag in conf['labels'][0].keys():
+                match = re.match("^(team1|team2|team3)$", conf['labels'][0][environment_tag])
+                is_matched = bool(match)
+                
+                if not is_matched:
+                    return CheckResult.FAILED
+                
+                return CheckResult.PASSED
 
 
 scanner = MissingTeamsInLabel()
