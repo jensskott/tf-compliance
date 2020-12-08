@@ -12,6 +12,5 @@ Scenario Outline: Ensure that specific labels are defined
     And its value must match the "<value>" regex
 
     Examples:
-        | labels      | value              |
-        | team        | .+                 |
-        | env         | ^(production\|staging\|development)$ |
+        | labels      | value                   |
+        | team        | ^(team1\|team2\|team3)$ |
